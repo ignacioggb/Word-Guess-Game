@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css">
+    <script src="assets/javascript/game.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Holtwood+One+SC" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body style="background-color: #69594c;">
+      <div style="background-image: url(http://1.bp.blogspot.com/-b5qfXqX8xV4/U-GhI9IYAII/AAAAAAAADXk/5OZAaTAuzKs/s1600/Wood_HandPainted_01.jpg);" class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light">
+        <div class="col-md-5 p-md-5 mx-auto my-5">
+          <h1 style="margin-bottom:30px; padding:5%;background-color:white;border-radius: 30px;font-family: 'Holtwood One SC', serif; border-color:saddlebrown; border-width: 15px; "
+           class="display-4 font-weight-normal" >Word guess game</h1>
+          <button type="button" class="btn btn-primary btn-lg" onclick="start()">Start game</button>
+        </div>
+
+
+      </div>
+      <div class="container" style="background-color:#988574;margin:auto;border-radius: 30px; padding:30px;">
+        <div class="row">
+                <div class="col-12">
+                        <div class="row">
+                                <div class="col-md-4">
+                                        <img id="image" style="display:block; margin:auto;" src="assets/images/image002.jpg" >
+
+                                    </div>
+                                <div class="col-md-8" style="margin:auto;">
+                                                <h4>Hint: <span id="hint"><strong> ! </strong></span></h4>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                                            Curabitur lacus eros, porta in dignissim ac, volutpat venenatis risus. 
+                                            Donec vel sem quis justo consequat congue. Phasellus nisl est, lacinia 
+                                            in urna ac, fringilla sollicitudin purus. Aliquam posuere vitae est eget 
+                                            ultricies. Nam efficitur justo quis nulla lacinia vehicula. Suspendisse 
+                                            sit amet vestibulum nulla. Vivamus fringilla sagittis fermentum. Curabitur 
+                                            id eros ornare, cursus ligula ut, faucibus orci.
+                                        </p>
+                                        <h2>User: <span id="word-displayed"><strong>Word Guess Game</strong></span></h2>
+                                        <h3>Letters Already Guessed: <span id="Letters-guessed"><strong> </strong></span></h3>
+                                        <h3>Number of Guesses Remaining: <span id="Remaining"><strong> </strong></span></h3>
+                                </div>
+                        </div>
+                </div>
+            </div>
+        </div>
+      
+</body>
+</html>
