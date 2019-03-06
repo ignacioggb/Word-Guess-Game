@@ -1,5 +1,6 @@
 
 var flag = true;
+var flag2 = true;
 var intentos=10;
 var guessed = false;
 var hints=[" the quality of being hot or warm","the process of making or growing goods to be sold","to say or write what someone or something is like",
@@ -13,21 +14,10 @@ var hintphrase = hints[ran];
 var ar = generator.split("");
 console.log(generator);
 
-
 function start(){
-
-    $("#word-displayed").on("touchstart", function(e) {
-        $("#holder").show({complete:function() {$("#in").focus();}});
-        event.stopPropagation();
-        event.preventDefault();
-        $("#in").focus();
-    });
-
 showunderscores(ar);
 game();
-
 }
-
 function showunderscores (ar){
     var underscore=[];
     for (let index = 0; index < ar.length; index++) {
@@ -37,18 +27,32 @@ function showunderscores (ar){
     return underscore;
 }
 
-
 function game(){
 var guessedArray =[""];
 var underscore = showunderscores(ar);
 var j = 0;
 var show = "";
 
+
 document.onkeyup = function(event) {
-console.log(intentos);
-console.log(event.key);
-guessedArray[j]=event.key;
-j++;
+
+
+    for (let k = 0; k < guessedArray.length; k++) {
+        if (event.key==guessedArray[k]){
+            flag=false;
+        }
+    }
+    if (flag==false){
+
+    }else{
+        guessedArray[j]=event.key;
+        j++;
+    }
+
+
+
+
+  
 
 
 document.getElementById("Letters-guessed").innerHTML=guessedArray;
@@ -62,12 +66,10 @@ for (let index = 0; index < ar.length; index++) {
         flag=false;
         }
     } 
-    if (flag==false)
-    {
-        flag=true;
-    }
-    else{
-        intentos=intentos-1;}
+    if (flag==false){flag=true;}
+    else{intentos=intentos-1;}
+
+
         imgchange(intentos);
 
   
@@ -89,9 +91,6 @@ document.getElementById("Remaining").innerHTML=intentos;
 document.getElementById("hint").innerHTML=hintphrase;
 
 }
-
-
-
 
 function imgchange(intentos){
 
