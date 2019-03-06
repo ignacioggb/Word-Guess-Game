@@ -44,6 +44,7 @@ guessedArray[j]=event.key;
 j++;
 
 prompt();
+//keyboard
 document.getElementById("Letters-guessed").innerHTML=guessedArray;
 
 for (let index = 0; index < ar.length; index++) {
