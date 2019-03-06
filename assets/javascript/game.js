@@ -15,12 +15,14 @@ console.log(generator);
 
 
 function start(){
-    $(function() {
-        $("#holder").hide();
-        $("#box").mousedown(function() {
-            $("#holder").show({complete:function() {$("#in").focus();}});
-        });
+
+    $("#word-displayed").on("touchstart", function(e) {
+        $("#holder").show({complete:function() {$("#in").focus();}});
+        event.stopPropagation();
+        event.preventDefault();
+        $("#in").focus();
     });
+
 showunderscores(ar);
 game();
 
