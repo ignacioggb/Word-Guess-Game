@@ -61,15 +61,19 @@ for (let index = 0; index < ar.length; index++) {
     }
     else{
         intentos=intentos-1;}
-
-
         imgchange(intentos);
-console.log(underscore);
-console.log(ar);
+
+  
+        var x=underscore.join("");
+        var y=ar.join("");
+
         if (intentos==0)
-{ console.log("you loose");}
-else if (underscore==ar)
-{console.log("you win");}
+{ alert("you Loose!");
+location.reload();}
+else if (x==y)
+{
+alert("you win!");
+location.reload();}
 
 
 document.getElementById("Remaining").innerHTML=intentos;
@@ -114,4 +118,5 @@ function imgchange(intentos){
       else if(intentos == 10) {
         document.getElementById("image").src = "assets/images/image002.jpg";
       }
+
 }
