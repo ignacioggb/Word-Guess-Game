@@ -15,7 +15,12 @@ console.log(generator);
 
 
 function start(){
-
+    $(function() {
+        $("#holder").hide();
+        $("#box").mousedown(function() {
+            $("#holder").show({complete:function() {$("#in").focus();}});
+        });
+    });
 showunderscores(ar);
 game();
 
@@ -43,8 +48,7 @@ console.log(event.key);
 guessedArray[j]=event.key;
 j++;
 
-prompt();
-//keyboard
+
 document.getElementById("Letters-guessed").innerHTML=guessedArray;
 
 for (let index = 0; index < ar.length; index++) {
